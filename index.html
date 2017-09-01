@@ -70,6 +70,7 @@
           zoom: 7,
           slider: false
         });
+	      
         var basemap = new ArcGISTiledMapServiceLayer("https://services.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer");
         app.map.addLayer(basemap);
         // var ref = new ArcGISTiledMapServiceLayer("https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Reference_Overlay/MapServer");
@@ -119,10 +120,10 @@
           app.map.addLayer(app.wash);
 
           // colors for the renderer
-          app.defaultFrom = Color.fromHex("#ff0000");
-          app.defaultTo = Color.fromHex("#00e600");
+         // app.defaultFrom = Color.fromHex("#ff0000");
+          //app.defaultTo = Color.fromHex("#00e600");
           
-          createRenderer("2014");
+          //createRenderer("2014");
         });
         
         // app.map.on("zoom-end", updateMaxOffset);
