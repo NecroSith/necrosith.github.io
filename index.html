@@ -7,22 +7,6 @@
 	<style>
       html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
       #map{ margin: 0; padding: 0; }
-      #feedback {
-        position: absolute;
-        height: 400px;
-        font-family: arial;
-        margin: 5px;
-        padding: 10px;
-        z-index: 40;
-        background: #fff;
-        color: #444;
-        width: 300px;
-        left: 30px;
-        top: 30px;
-        -moz-box-shadow: 0 0 5px #888;
-        -webkit-box-shadow: 0 0 5px #888;
-        box-shadow: 0 0 5px #888;
-      }
       #county { 
         padding: 5px 0 0 0;
         font-weight: 700;
@@ -263,20 +247,6 @@
       <div id="map"
            data-dojo-type="dijit.layout.ContentPane"
            data-dojo-props="region:'center'">
-
-        <div id="feedback">
-          <h3>Washington State</h3>
-          <div id="info">
-            <div id="note">
-              Note:  This sample requires an ArcGIS Server version 10.1 map service to generate a renderer.
-            </div>
-            Select a field to use to create a renderer for the counties in Washington state.
-          </div>
-          <div id="legendWrapper"></div>
-          <div id="fieldWrapper">
-            Currently selected attribute:
-          </div>
-        </div>
       </div>
     </div>
   </body>
