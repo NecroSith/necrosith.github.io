@@ -4,6 +4,33 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="stylesheet" href="https://js.arcgis.com/3.21/esri/css/esri.css">
+	<style>
+      html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
+      #map{ margin: 0; padding: 0; }
+      #feedback {
+        position: absolute;
+        height: 400px;
+        font-family: arial;
+        margin: 5px;
+        padding: 10px;
+        z-index: 40;
+        background: #fff;
+        color: #444;
+        width: 300px;
+        left: 30px;
+        top: 30px;
+        -moz-box-shadow: 0 0 5px #888;
+        -webkit-box-shadow: 0 0 5px #888;
+        box-shadow: 0 0 5px #888;
+      }
+      #county { 
+        padding: 5px 0 0 0;
+        font-weight: 700;
+      }
+      #legendWrapper { padding: 20px 0 0 0; }
+      #note { font-size: 80%; font-weight: 700; padding: 0 0 10px 0; }
+      h3 { margin: 0 0 5px 0; border-bottom: 1px solid #444; }
+    </style>
 <script src="https://js.arcgis.com/3.21/"></script>
 <script>
       // one global for persistent app variables
@@ -50,7 +77,7 @@
         app.fields = { 
           "ID": "ID", "L_CODE": "Код", 
           "OKATO": "ОКАТО", "ADM": "Название", "AVT": "AVT", 
-          "FDR": "FDR", "Population": "Насеелние", "2014": "2014", 
+          "FDR": "FDR", "Population": "Население", "2014": "2014", 
           "2015": "2015", "2016": "2016" 
         };
         
@@ -227,13 +254,6 @@
         }
       });
     </script>
-<style>
-  html, body, #map {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-  }
-</style>
 <title> Test web page </title>
 </head>
 <body class="claro">
