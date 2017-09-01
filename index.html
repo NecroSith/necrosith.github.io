@@ -94,13 +94,13 @@
         // create a feature layer 
         // wait for map to load so the map's extent is available
         app.map.on("load", function() {
-          app.wash = new FeatureLayer(app.regionsUrl, {
+          app.wash = new FeatureLayer(app.regionsUrl) /*{
             // "id": "Washington",
             "infoTemplate": app.popupTemplate,
             "maxAllowableOffset": maxOffset(),
             "mode": FeatureLayer.MODE_SNAPSHOT,
             "outFields": app.outFields,
-            "opacity": 0.8
+            "opacity": 0.8*/
           });
           // apply a layer def to show only counties in Washington
           // app.wash.setDefinitionExpression(app.layerDef);
