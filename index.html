@@ -125,9 +125,9 @@
           createRenderer("2014");
         });
         
-        app.map.on("zoom-end", updateMaxOffset);
+        // app.map.on("zoom-end", updateMaxOffset);
 
-        // create a store and a filtering select for the county layer's fields
+        //create a store and a filtering select for the county layer's fields
         /* var fieldNames, fieldStore, fieldSelect;
         fieldNames = { "identifier": "value", "label": "name", "items": []};
         arrayUtils.forEach(app.outFields, function(f) {
@@ -148,7 +148,7 @@
         }, domConstruct.create("div", null, dom.byId("fieldWrapper")));
         fieldSelect.on("change", updateAttribute); */
 
-        function createRenderer(field) {
+       /* function createRenderer(field) {
           app.sfs = new SimpleFillSymbol(
             SimpleFillSymbol.STYLE_SOLID,
             new SimpleLineSymbol(
@@ -222,7 +222,7 @@
             }]
           }, legendDiv);
           app.legend.startup();
-        }
+        } */
 
         function updateMaxOffset() {
           var offset = maxOffset();
