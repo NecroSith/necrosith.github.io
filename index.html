@@ -61,8 +61,8 @@
         });
         var basemap = new ArcGISTiledMapServiceLayer("https://services.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer");
         app.map.addLayer(basemap);
-        var ref = new ArcGISTiledMapServiceLayer("https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Reference_Overlay/MapServer");
-        app.map.addLayer(ref);
+        // var ref = new ArcGISTiledMapServiceLayer("https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Reference_Overlay/MapServer");
+        // app.map.addLayer(ref);
 
         // various info for the feature layer
         app.regionsUrl = "http://10.2.4.5:6080/arcgis/rest/services/test/TimeBarTest/MapServer";
