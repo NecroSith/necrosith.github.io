@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://js.arcgis.com/3.21/esri/css/esri.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="https://js.arcgis.com/3.21/esri/css/esri.css">
 	<style>
-      html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
-      #map{ margin: 0; padding: 0; }
-      #county { 
-        padding: 5px 0 0 0;
-        font-weight: 700;
-      }
-      #legendWrapper { padding: 20px 0 0 0; }
-      #note { font-size: 80%; font-weight: 700; padding: 0 0 10px 0; }
-      h3 { margin: 0 0 5px 0; border-bottom: 1px solid #444; }
-    </style>
-<script src="https://js.arcgis.com/3.21/"></script>
+      		html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
+      		#map{ margin: 0; padding: 0; }
+      		#county { 
+        		padding: 5px 0 0 0;
+        		font-weight: 700;
+      			}
+      		#legendWrapper { padding: 20px 0 0 0; }
+      		#note { font-size: 80%; font-weight: 700; padding: 0 0 10px 0; }
+      		h3 { margin: 0 0 5px 0; border-bottom: 1px solid #444; }
+    	</style>
+	<script src="https://js.arcgis.com/3.21/"></script>
 <script>
       // one global for persistent app variables
       var app = {};
@@ -107,7 +107,7 @@
 
           // show selected attribute on click
           app.mapClick = app.wash.on("click", function(evt) {
-            var name = evt.graphic.attributes.NAME + " County",
+            var name = evt.graphic.attributes.ADM,
                 ca = app.currentAttribute,
                 content = app.fields[ca] + ": " + number.format(evt.graphic.attributes[ca]);
             app.map.infoWindow.setTitle(name);
