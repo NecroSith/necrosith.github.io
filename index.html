@@ -18,30 +18,22 @@ html, body, #map {
 </style>
 
 <script>
-require([
-    "esri/map",
-    "esri/WebMap",
-    "dojo/domReady!"
-  ],
-  function(
-    Map,
-    WebMap
-  ) {
-
-    var map = new Map("map", {
-      basemap: "hybrid",
-      center: [40.5433 , 64.5401],
-      zoom: 7
-    });
+  require([
+      "esri/WebMap",
+      "esri/views/MapView",
+      "dojo/domReady!"
+    ], function(WebMap, MapView) {
 
     var webmap = new WebMap({
-          portalitem: {
-            id: "6d5eefb30dfd4fe98d3577cc0bb2f07f" 
-          }
-        });
+      portalItem: {
+        id: "6d5eefb30dfd4fe98d3577cc0bb2f07f"
+      }
+    });
 
-    map.addLayer(webmap);
-
+    var view = new MapView({
+      container: "viewDiv",
+      map: webmap
+    });
   });
 </script>
 </head>
