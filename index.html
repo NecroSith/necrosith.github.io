@@ -13,16 +13,14 @@
 </style>
 	<script src="https://js.arcgis.com/3.21/"></script>
 <script>
-      require([
-        "esri/map", 
-        "dojo/domReady!"
-      ], function(Map) {
-	  map = new Map("map", { 
-	  basemap: "topo",
-          center: [40.32, 64.33],
-          zoom: 7,
-          slider: false 
-        })
+var map;
+require(["esri/map", "dojo/domReady!"], function(Map) {
+  map = new Map("map", {
+    basemap: "topo",
+    center: [-122.45, 37.75],
+    zoom: 13
+  });
+});
     </script>
 <title> Test web page </title>
 </head>
