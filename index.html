@@ -20,12 +20,12 @@ html, body, #map {
 <script>
 require([
     "esri/map",
-    "esri/layers/FeatureLayer",
+    "esri/layers/ArcGISDynamicMapServiceLayer",
     "dojo/domReady!"
   ],
   function(
     Map,
-    FeatureLayer
+    ArcGISDynamicMapServiceLayer
   ) {
 
     var map = new Map("map", {
@@ -41,9 +41,11 @@ require([
      ***************************************************************/
 
     // Carbon storage of trees in Warren Wilson College.
-    var featureLayer = new FeatureLayer("http://10.2.4.5:6080/arcgis/rest/services/test/TimeBarTest/MapServer");
+    var dynamicMapServiceLayer = new ArcGISDynamicMapServiceLayer("https://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Demographics/ESRI_Population_World/MapServer", {
+          "opacity" : 0.5,
+        });
 
-    map.addLayer(featureLayer);
+    map.addLayer(dynamicMapServiceLayer);
 
   });
 </script>
