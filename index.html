@@ -1,31 +1,40 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-	<link rel="stylesheet" href="https://js.arcgis.com/3.21/esri/css/esri.css">
-	<script src="https://js.arcgis.com/3.21/"></script>
-<style>
-  html, body, #map {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-  }
-</style>	
-<script>
-var map;
-require(["esri/map", 
-	 "esri/map", "esri/layers/ArcGISTiledMapServiceLayer"
-	 "dojo/domReady!"
-	], function(Map, ArcGISTiledMapServiceLayer) {
-  map = new Map("map", { basemap: "topo", center: [40.32598, 64.32406], zoom: 10 });
-  //var baseMapLayer = new ArcGISTiledMapServiceLayer("http://10.2.4.5:6080/arcgis/rest/services/test/TimeBarTest/MapServer/0");
-  //map.addLayer(baseMapLayer);
-});
-    </script>
-<title> Test web page </title>
-</head>
-<body class="claro">
-  <div id="map"></div>
-</body>
+  <html>
+  <head>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="https://js.arcgis.com/4.3/esri/css/main.css">
+	<script src="https://js.arcgis.com/4.3/"></script>
+    <title>Time bar</title>
+    <style>
+      html, body, #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+	  <script>
+  require([
+      "esri/Map",
+      "esri/views/MapView",
+      "dojo/domReady!"
+    ], function(Map, MapView) {
+
+    var map = new Map({
+      	basemap: "topo-vector",
+	center: [40.32598, 64.32406],
+	zoom: 10
+    });
+
+    var view = new MapView({
+      container: "viewDiv",
+      map: map
+    });
+  });
+</script>
+  </head>
+  <body>
+    <div id="viewDiv"></div>
+  </body>
 </html>
