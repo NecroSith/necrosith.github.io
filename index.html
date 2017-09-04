@@ -1,49 +1,56 @@
 <!DOCTYPE html>
-  <html>
-  <head>
-    	<meta charset="utf-8">
-    	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-	<link rel="stylesheet" href="https://js.arcgis.com/4.3/esri/css/main.css">
-	<script src="https://js.arcgis.com/4.3/"></script>
-    <title>Time bar</title>
-    <style>
-      html, body, #viewDiv {
-        padding: 0;
-        margin: 0;
-        height: 100%;
-        width: 100%;
-      }
-    </style>
-	  <script>
-  require([
-      "esri/Map",
-      "esri/views/MapView",
-	"esri/layers/FeatureLayer",
-      "dojo/domReady!"
-    ], function(Map, MapView) {
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>FeatureLayer</title>
 
-    var map = new Map({
-      	basemap: "topo-vector",
-	center: [40.32598, 64.32406],
-	zoom: 10
+<link rel="stylesheet" href="https://js.arcgis.com/3.21/esri/css/esri.css">
+<script src="https://js.arcgis.com/3.21/"></script>
+
+<style>
+html, body, #map {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+</style>
+
+<script>
+require([
+    "esri/map",
+    "esri/layers/FeatureLayer",
+    "dojo/domReady!"
+  ],
+  function(
+    Map,
+    FeatureLayer
+  ) {
+
+    var map = new Map("map", {
+      basemap: "hybrid",
+      center: [-82.44109, 35.6122],
+      zoom: 17
     });
-	  
-	var featureLayer = new FeatureLayer({
-    	url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads/FeatureServer"
-  	});
 
-	  map.add(featureLayer);
+    /****************************************************************
+     * Add feature layer - A FeatureLayer at minimum should point
+     * to a URL to a feature service or point to a feature collection 
+     * object.
+     ***************************************************************/
 
-    var view = new MapView({
-      container: "viewDiv",
-      map: map,
-//center: [40.32598, 64.32406],
-  //zoom: 10
-    });
+    // Carbon storage of trees in Warren Wilson College.
+    var featureLayer = new FeatureLayer("https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Landscape_Trees/FeatureServer/0");
+
+    map.addLayer(featureLayer);
+
   });
 </script>
-  </head>
-  <body>
-    <div id="viewDiv"></div>
-  </body>
+</head>
+
+<body>
+  <div id="map"></div>
+</body>
+
 </html>
