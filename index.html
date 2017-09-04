@@ -7,13 +7,6 @@
 	<style>
       		html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
       		#map{ margin: 0; padding: 0; }
-      		#county { 
-        		padding: 5px 0 0 0;
-        		font-weight: 700;
-      			}
-      		#legendWrapper { padding: 20px 0 0 0; }
-      		#note { font-size: 80%; font-weight: 700; padding: 0 0 10px 0; }
-      		h3 { margin: 0 0 5px 0; border-bottom: 1px solid #444; }
     	</style>
 	<script src="https://js.arcgis.com/3.21/"></script>
 <script>
@@ -73,14 +66,14 @@
 	      
         var basemap = new ArcGISTiledMapServiceLayer("https://services.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer");
         app.map.addLayer(basemap);
-        // var ref = new ArcGISTiledMapServiceLayer("https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Reference_Overlay/MapServer");
-        // app.map.addLayer(ref);
+        var ref = new ArcGISTiledMapServiceLayer("https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Reference_Overlay/MapServer");
+        app.map.addLayer(ref);
 
         // various info for the feature layer
         // app.regionsUrl = "http://10.2.4.5:6080/arcgis/rest/services/test/TimeBarTest/MapServer/0";
         // app.layerDef = "STATE_NAME = 'Washington'";
-        app.outFields = ["ID", "L_CODE", "OKATO", "ADM", "AVT", "FDR", "Population", "OTHER", "2014", "2015", "2016"];
-        app.currentAttribute = "2014";
+        //app.outFields = ["ID", "L_CODE", "OKATO", "ADM", "AVT", "FDR", "Population", "OTHER", "2014", "2015", "2016"];
+        //app.currentAttribute = "2014";
 
     </script>
 <title> Test web page </title>
