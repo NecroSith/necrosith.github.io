@@ -31,7 +31,7 @@ require([
     var map = new Map("map", {
       basemap: "hybrid",
       center: [40.5433 , 64.5401],
-      zoom: 13
+      zoom: 7
     });
 
     /****************************************************************
@@ -41,7 +41,7 @@ require([
      ***************************************************************/
 
     // Carbon storage of trees in Warren Wilson College.
-    var featureLayer = new FeatureLayer("http://10.2.4.5:6080/arcgis/rest/services/test/TimeBarTest/MapServer/0");
+    var featureLayer = new FeatureLayer("http://10.2.4.5:6080/arcgis/rest/services/test/TimeBarTest/MapServer");
 
     map.addLayer(featureLayer);
 
