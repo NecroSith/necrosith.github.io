@@ -14,67 +14,14 @@
       var app = {};
       require([
         "esri/map", 
-        "esri/layers/ArcGISTiledMapServiceLayer", 
-		"esri/layers/FeatureLayer", 
-        "esri/tasks/ClassBreaksDefinition", 
-		"esri/tasks/AlgorithmicColorRamp",
-        "esri/tasks/GenerateRendererParameters", 
-		"esri/tasks/GenerateRendererTask",
-        "esri/symbols/SimpleLineSymbol", 
-		"esri/symbols/SimpleFillSymbol", 
-        "esri/dijit/PopupTemplate", 
-		"esri/dijit/Legend",
-        "dojo/parser", 
-		"dojo/_base/array", 
-		"esri/Color",
-        "dojo/dom", 
-		"dojo/dom-construct", 
-		"dojo/number",
-        "dojo/data/ItemFileReadStore", 
-		"dijit/form/FilteringSelect",
-        
-        "dijit/layout/BorderContainer", 
-		"dijit/layout/ContentPane",
         "dojo/domReady!"
-      ], function(
-        Map, 
-        ArcGISTiledMapServiceLayer, FeatureLayer, 
-        ClassBreaksDefinition, AlgorithmicColorRamp,
-        GenerateRendererParameters, GenerateRendererTask,
-        SimpleLineSymbol, SimpleFillSymbol, 
-        PopupTemplate, Legend,
-        parser, arrayUtils, Color, 
-        dom, domConstruct, number,
-        ItemFileReadStore, FilteringSelect
-      ) {
-        parser.parse();
-        // the counties map service uses the actual field name as the field alias
-        // set up an object to use as a lookup table to convert from terse field
-        // names to more user friendly field names
-        /* app.fields = { 
-          "ID": "ID", "L_CODE": "Код", 
-          "OKATO": "ОКАТО", "ADM": "Название", "AVT": "AVT", 
-          "FDR": "FDR", "Population": "Население", "2014": "2014", 
-          "2015": "2015", "2016": "2016" 
-        };*/
-        
-        app.map = new Map("map", { 
+      ], function(Map) {
+	  app.map = new Map("map", { 
+	  basemap: "topo",
           center: [40.32, 64.33],
           zoom: 7,
-          slider: false
-        });
-	      
-        var basemap = new ArcGISTiledMapServiceLayer("https://services.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer");
-        app.map.addLayer(basemap);
-        var ref = new ArcGISTiledMapServiceLayer("https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Reference_Overlay/MapServer");
-        app.map.addLayer(ref);
-
-        // various info for the feature layer
-        // app.regionsUrl = "http://10.2.4.5:6080/arcgis/rest/services/test/TimeBarTest/MapServer/0";
-        // app.layerDef = "STATE_NAME = 'Washington'";
-        //app.outFields = ["ID", "L_CODE", "OKATO", "ADM", "AVT", "FDR", "Population", "OTHER", "2014", "2015", "2016"];
-        //app.currentAttribute = "2014";
-
+          slider: false 
+        })
     </script>
 <title> Test web page </title>
 </head>
