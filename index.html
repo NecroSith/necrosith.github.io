@@ -15,6 +15,12 @@ html, body, #map {
   height: 100%;
   width: 100%;
 }
+  
+  .btn_change {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+  }
 </style>
 
 <script>
@@ -23,7 +29,9 @@ html, body, #map {
       "esri/arcgis/utils"
     ], function(map, MapView) {
 
-  var mapid = "1b24fbb3b38346d8b5f134bfd2c85f95"
+  var mapid1 = "1b24fbb3b38346d8b5f134bfd2c85f95"
+  var mapid2 = ""
+  var mapid3 = ""
   var mapDeferred = esri.arcgis.utils.createMap(mapid, "map", {
   mapOptions: {
       slider: true,
