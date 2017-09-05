@@ -17,9 +17,10 @@ html, body, #map {
 }
   
   .btn_change {
-    padding: 0;
-    margin: 0;
     position: absolute;
+    left: 10px;
+    bottom: 10px;
+    z-index: 100;
   }
 </style>
 
@@ -39,12 +40,18 @@ html, body, #map {
     opacity: 0.8
               }
       });
+    
+    function change_attr() {
+    
+    }
   });
 </script>
 </head>
 
 <body>
-  <div id="map"></div>
+  <div id="map">
+  <button type="button" class="btn_change" onclick="change_attr();">Next</button>
+  </div>
 </body>
 
 </html>
