@@ -28,7 +28,9 @@ html, body, #map {
   require([
       "esri/map",
       "esri/arcgis/utils"
-    ], function(map, MapView) {
+    ], 
+          
+    function(map, MapView) {
 
   var mapid1 = "1b24fbb3b38346d8b5f134bfd2c85f95"
   var mapid2 = ""
@@ -36,13 +38,13 @@ html, body, #map {
   var mapDeferred = esri.arcgis.utils.createMap(mapid, "map", {
   mapOptions: {
       slider: true,
-      nav:false
+      nav: false
          }
       });
   });
   function change_attr() {
     
-    }
+    
 </script>
 </head>
 
