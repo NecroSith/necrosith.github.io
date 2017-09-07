@@ -28,18 +28,25 @@ html, body, #map {
    require([
        "esri/map",
         "esri/arcgis/utils"
-      ], function(map, MapView) {
-  
-
-    var mapid = "1b24fbb3b38346d8b5f134bfd2c85f95"
-    var mapDeferred = esri.arcgis.utils.createMap(mapid, "map", {
-    mapOptions: {
-        slider: true,
-       nav:false
-               }
-       });
+      ], 
+       var mapids = ['1b24fbb3b38346d8b5f134bfd2c85f95', '1b414ed2420240de9b9626af919d242e', '5c0d1e0ad6834ce0a701fbe1358362f8']
+           
+       function(map, MapView) {
+          var mapid = "1b24fbb3b38346d8b5f134bfd2c85f95"
+          var mapDeferred = esri.arcgis.utils.createMap(mapid, "map", {
+          mapOptions: {
+            slider: true,
+            nav:false
+                      }
+         });
+     
+       function change_attr() {
+          var mapDeferred = esri.arcgis.utils.createMap(mapids[1], "map", {
+          mapOptions: {
+              slider: true,
+              nav:false
+                      }
    });
-    
 </script>
 </head>
 
