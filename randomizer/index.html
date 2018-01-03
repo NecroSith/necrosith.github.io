@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Who pays the bill?</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container_row">
+            <div class="applicant_container">
+            <h1>Who pays the bill?</h1>
+            <div class="container_row_input">
+                <input type="text" id="applicant_value" placeholder="Enter an applicant">
+                <span id="add_applicant">Add</span>
+            </div>
+
+            <div class="applicant_list">
+                <h5>Who is participating?</h5>
+                <div class="applicant_list_wrapper">
+                </div>
+
+            </div>
+
+                <div class="button_container">
+                    <div id="show_results">Get the loser</div>
+                </div>
+        </div>
+        </div>
+        <div class="results_container hidden">
+            <h1>The loser is:</h1>
+            <div class="result">
+            </div>
+            <div class="results_actions">
+                <div class="run_again">Run it again</div>
+                <div class="start_again">Start again</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/main.js"></script>
+</html>
