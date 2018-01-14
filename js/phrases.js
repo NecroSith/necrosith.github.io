@@ -1,7 +1,7 @@
 
 (function() {
 	
-	var phrases = ['How does it feel to be locked inside another dream that never had a chance of being realized? (c)', 'You cannot kill what you did not create', 'I took a life worth living and made it worth a mockery'];
+	var phrases = ['How does it feel to be locked inside another dream that never had a chance of being realized? (c)', 'You cannot kill what you did not create', 'I took a life worth living and made it worth a mockery', 'Speed defines success'];
 	
 	this.init = function() {
 		getRandomPhrase();
