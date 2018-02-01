@@ -7,6 +7,19 @@
 <meta name="description" content="GISLab это маленький сайт, на котором один инженер выкладывает свои небольшие проекты" />
 <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
 </head>
+<script type="text/javascript
+src="https://www.giszemlya.dvinaland.ru/view/geoportal/embedded/app.embedded.js">
+</script>
+<script>
+	window.onload = function () {
+		var config = {
+			serverUrl: 'https://www.giszemlya.dvinaland.ru/view/',
+			proxyUrl: ''
+	}
+	window.szc.geoportal.init('#rusgis', config, onGeoportalReady);
+	};
+	function onGeoportalReady(api) { };
+</script>
 <body>
 <div id="templatemo_wrapper">
 
@@ -51,21 +64,8 @@
 		  своих навыков работы с ГИС, Javascript, C++, Python и компьютерного моделирования. Также, думаю, здесь найдется место и для других моих хобби, вроде автоматики и робототехники. </p>
 		  <p> Пока что тут пустовато, но я работаю над этим :) Если будут какие-то вопросы или пожелания, то пишите письма через страницу "Обратная связь". Если же хочется более живого общения с комментариями, дискуссиями и всем таким,
 		  то закглядывайте на  <a href="http://yanpustynnyy.wordpress.com">мой блог</a>, где я рассказываю более подробно про штуки, требующие большого количества печатных знаков. </p>
-          <div class="cleaner_h40"></div>
-		 <div> <script type="text/javascript
-src="https://www.giszemlya.dvinaland.ru/view/geoportal/embedded/app.embedded.js">
-</script>
-<script>
-	window.onload = function () {
-		var config = {
-			serverUrl: 'https://www.giszemlya.dvinaland.ru/view/',
-			proxyUrl: ''
-	}
-	window.szc.geoportal.init('#rusgis', config, onGeoportalReady);
-	};
-	function onGeoportalReady(api) { };
-</script>
-			 <div id="rusgis"></div></div>
+		 
+		 <div id="rusgis"></div>
 	</div> <!-- end of templatemo_content -->
 		  
 	
